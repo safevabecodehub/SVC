@@ -13,10 +13,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-3 group">
-          <div className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-            SafeVibeCode
-          </div>
+        <Link href="/" className="flex items-center group">
+          <img 
+            src="/logo.png" 
+            alt="SafeVibeCode" 
+            className="h-10 w-auto object-contain hover:scale-105 transition-transform"
+          />
         </Link>
 
         {/* Navigation */}

@@ -49,14 +49,19 @@ export default function Hero() {
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
             {/* Glowing background effect */}
-            <div className="absolute inset-0 bg-gradient-accent opacity-20 blur-3xl rounded-full" />
+            <div className="absolute inset-0 bg-gradient-accent opacity-20 blur-3xl rounded-3xl" />
             
-            {/* Coin placeholder - replace with your 3D coin image */}
-            <div className="relative z-10 w-full h-full rounded-full bg-gradient-accent flex items-center justify-center shadow-2xl shadow-accent-purple/30">
-              <div className="text-center space-y-2">
-                <div className="text-6xl font-bold text-white">SVC</div>
-                <div className="text-sm text-white/80">3D Coin Here</div>
-              </div>
+            {/* 3D Coin Video */}
+            <div className="relative z-10 w-full h-full overflow-hidden shadow-2xl shadow-accent-purple/30 rounded-3xl border-2 border-yellow-400/30 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-contain"
+              >
+                <source src="/coin.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 

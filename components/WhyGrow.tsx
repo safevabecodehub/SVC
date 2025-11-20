@@ -1,22 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Sparkles, Shield, Eye } from "lucide-react";
 
 const reasons = [
   {
     title: "AI — самый быстрорастущий рынок",
     description: "SVC привязан к реальным продуктам в сфере, которая растёт ежегодно.",
-    icon: "🚀",
+    icon: Sparkles,
   },
   {
     title: "Реальная ликвидность, а не «фейковый оборот»",
     description: "Токен используется для реальных услуг и взаиморасчётов.",
-    icon: "💎",
+    icon: Shield,
   },
   {
     title: "Прозрачная модель инвестиций",
     description: "R&D и разработки финансируются через SVC — без сложных схем.",
-    icon: "🔍",
+    icon: Eye,
   },
 ];
 
@@ -50,7 +51,9 @@ export default function WhyGrow() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex items-start space-x-6 bg-background/50 rounded-xl p-6 border border-white/5"
             >
-              <div className="text-4xl flex-shrink-0">{reason.icon}</div>
+              <div className="flex-shrink-0">
+                <reason.icon className="w-10 h-10 text-accent-purple" />
+              </div>
               <div>
                 <h3 className="text-xl font-bold mb-2 text-white">
                   {reason.title}

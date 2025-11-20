@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Cpu, Coins, LineChart } from "lucide-react";
 
 const utilities = [
   {
-    icon: "🛠",
+    icon: Cpu,
     title: "Оплата разработок",
     description: "Все сервисы, инструменты и продукты комьюнити работают через SVC.",
   },
   {
-    icon: "🔗",
+    icon: Coins,
     title: "Внутренние взаиморасчёты",
     description: "Оплата услуг, премий, задач и подрядчиков внутри сообщества.",
   },
   {
-    icon: "📈",
+    icon: LineChart,
     title: "Инвестиционная модель",
     description: "R&D и продукты привязаны к SVC, формируя реальную экономику.",
   },
@@ -49,8 +50,8 @@ export default function Utility() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-card rounded-2xl p-8 border border-white/5 hover:border-accent-cyan/30 transition-all duration-300 hover:shadow-xl hover:shadow-accent-cyan/10"
             >
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+              <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                <item.icon className="w-12 h-12 text-accent-cyan" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-white">
                 {item.title}
